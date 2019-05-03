@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		218BFA8DDFC2FC6C2619DD36 /* Pods_Makelaars020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34EB72603947938A8201FD46 /* Pods_Makelaars020.framework */; };
 		50A8FFB1227C6748002A9CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A8FFB0227C6748002A9CCB /* AppDelegate.swift */; };
 		50A8FFB3227C6748002A9CCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A8FFB2227C6748002A9CCB /* ViewController.swift */; };
 		50A8FFB6227C6748002A9CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A8FFB4227C6748002A9CCB /* Main.storyboard */; };
 		50A8FFB8227C674C002A9CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50A8FFB7227C674C002A9CCB /* Assets.xcassets */; };
 		50A8FFBB227C674C002A9CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A8FFB9227C674C002A9CCB /* LaunchScreen.storyboard */; };
 		50A8FFC6227C674C002A9CCB /* Makelaars020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A8FFC5227C674C002A9CCB /* Makelaars020Tests.swift */; };
+		50A8FFD2227C6905002A9CCB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A8FFD1227C6905002A9CCB /* Constants.swift */; };
+		50A8FFD7227C6FC0002A9CCB /* Houses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A8FFD6227C6FC0002A9CCB /* Houses.swift */; };
+		50A8FFDA227C6FEB002A9CCB /* houses1.json in Resources */ = {isa = PBXBuildFile; fileRef = 50A8FFD9227C6FEB002A9CCB /* houses1.json */; };
+		50A8FFDB227C6FEE002A9CCB /* houses1.json in Resources */ = {isa = PBXBuildFile; fileRef = 50A8FFD9227C6FEB002A9CCB /* houses1.json */; };
+		DF5DDA5BE27963685A081D19 /* Pods_Makelaars020Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CD43BAD95EA530EE0C5785 /* Pods_Makelaars020Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EA194602BB2B9FC3C428E8D /* Pods-Makelaars020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makelaars020.debug.xcconfig"; path = "Target Support Files/Pods-Makelaars020/Pods-Makelaars020.debug.xcconfig"; sourceTree = "<group>"; };
+		34EB72603947938A8201FD46 /* Pods_Makelaars020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makelaars020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C125877B5E07F1EEBDD40F2 /* Pods-Makelaars020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makelaars020.release.xcconfig"; path = "Target Support Files/Pods-Makelaars020/Pods-Makelaars020.release.xcconfig"; sourceTree = "<group>"; };
 		50A8FFAD227C6748002A9CCB /* Makelaars020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makelaars020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A8FFB0227C6748002A9CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50A8FFB2227C6748002A9CCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +45,12 @@
 		50A8FFC1227C674C002A9CCB /* Makelaars020Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Makelaars020Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A8FFC5227C674C002A9CCB /* Makelaars020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Makelaars020Tests.swift; sourceTree = "<group>"; };
 		50A8FFC7227C674C002A9CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50A8FFD1227C6905002A9CCB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		50A8FFD6227C6FC0002A9CCB /* Houses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Houses.swift; sourceTree = "<group>"; };
+		50A8FFD9227C6FEB002A9CCB /* houses1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses1.json; sourceTree = "<group>"; };
+		612329B9CF5934536CA72054 /* Pods-Makelaars020Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makelaars020Tests.release.xcconfig"; path = "Target Support Files/Pods-Makelaars020Tests/Pods-Makelaars020Tests.release.xcconfig"; sourceTree = "<group>"; };
+		76C2674077F63BAD4E7EFC8B /* Pods-Makelaars020Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makelaars020Tests.debug.xcconfig"; path = "Target Support Files/Pods-Makelaars020Tests/Pods-Makelaars020Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D3CD43BAD95EA530EE0C5785 /* Pods_Makelaars020Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makelaars020Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218BFA8DDFC2FC6C2619DD36 /* Pods_Makelaars020.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +66,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF5DDA5BE27963685A081D19 /* Pods_Makelaars020Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4760DD25D9F08EB1E3A348B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34EB72603947938A8201FD46 /* Pods_Makelaars020.framework */,
+				D3CD43BAD95EA530EE0C5785 /* Pods_Makelaars020Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		50A8FFA4227C6748002A9CCB = {
 			isa = PBXGroup;
 			children = (
 				50A8FFAF227C6748002A9CCB /* Makelaars020 */,
 				50A8FFC4227C674C002A9CCB /* Makelaars020Tests */,
 				50A8FFAE227C6748002A9CCB /* Products */,
+				D9EE19097038CF29CBF9FDA0 /* Pods */,
+				4760DD25D9F08EB1E3A348B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +105,10 @@
 		50A8FFAF227C6748002A9CCB /* Makelaars020 */ = {
 			isa = PBXGroup;
 			children = (
+				50A8FFD5227C6FB3002A9CCB /* Models */,
+				50A8FFD4227C69BE002A9CCB /* Viewcontrollers */,
+				50A8FFD3227C6935002A9CCB /* Views */,
+				50A8FFD0227C68E8002A9CCB /* Constants */,
 				50A8FFB0227C6748002A9CCB /* AppDelegate.swift */,
 				50A8FFB2227C6748002A9CCB /* ViewController.swift */,
 				50A8FFB4227C6748002A9CCB /* Main.storyboard */,
@@ -90,10 +122,61 @@
 		50A8FFC4227C674C002A9CCB /* Makelaars020Tests */ = {
 			isa = PBXGroup;
 			children = (
+				50A8FFD8227C6FD7002A9CCB /* TestsJsons */,
 				50A8FFC5227C674C002A9CCB /* Makelaars020Tests.swift */,
 				50A8FFC7227C674C002A9CCB /* Info.plist */,
 			);
 			path = Makelaars020Tests;
+			sourceTree = "<group>";
+		};
+		50A8FFD0227C68E8002A9CCB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				50A8FFD1227C6905002A9CCB /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		50A8FFD3227C6935002A9CCB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		50A8FFD4227C69BE002A9CCB /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		50A8FFD5227C6FB3002A9CCB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50A8FFD6227C6FC0002A9CCB /* Houses.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		50A8FFD8227C6FD7002A9CCB /* TestsJsons */ = {
+			isa = PBXGroup;
+			children = (
+				50A8FFD9227C6FEB002A9CCB /* houses1.json */,
+			);
+			path = TestsJsons;
+			sourceTree = "<group>";
+		};
+		D9EE19097038CF29CBF9FDA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1EA194602BB2B9FC3C428E8D /* Pods-Makelaars020.debug.xcconfig */,
+				3C125877B5E07F1EEBDD40F2 /* Pods-Makelaars020.release.xcconfig */,
+				76C2674077F63BAD4E7EFC8B /* Pods-Makelaars020Tests.debug.xcconfig */,
+				612329B9CF5934536CA72054 /* Pods-Makelaars020Tests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +186,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50A8FFCA227C674C002A9CCB /* Build configuration list for PBXNativeTarget "Makelaars020" */;
 			buildPhases = (
+				0B52CD2B229E04F7DEBF46EA /* [CP] Check Pods Manifest.lock */,
 				50A8FFA9227C6748002A9CCB /* Sources */,
 				50A8FFAA227C6748002A9CCB /* Frameworks */,
 				50A8FFAB227C6748002A9CCB /* Resources */,
@@ -120,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50A8FFCD227C674C002A9CCB /* Build configuration list for PBXNativeTarget "Makelaars020Tests" */;
 			buildPhases = (
+				E78591800CD72CF9E4EDC723 /* [CP] Check Pods Manifest.lock */,
 				50A8FFBD227C674C002A9CCB /* Sources */,
 				50A8FFBE227C674C002A9CCB /* Frameworks */,
 				50A8FFBF227C674C002A9CCB /* Resources */,
+				665FC48D8E90E8708A891E86 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A8FFDB227C6FEE002A9CCB /* houses1.json in Resources */,
 				50A8FFBB227C674C002A9CCB /* LaunchScreen.storyboard in Resources */,
 				50A8FFB8227C674C002A9CCB /* Assets.xcassets in Resources */,
 				50A8FFB6227C6748002A9CCB /* Main.storyboard in Resources */,
@@ -187,10 +274,80 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A8FFDA227C6FEB002A9CCB /* houses1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B52CD2B229E04F7DEBF46EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Makelaars020-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		665FC48D8E90E8708A891E86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Makelaars020Tests/Pods-Makelaars020Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Makelaars020Tests/Pods-Makelaars020Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E78591800CD72CF9E4EDC723 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Makelaars020Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		50A8FFA9227C6748002A9CCB /* Sources */ = {
@@ -199,6 +356,8 @@
 			files = (
 				50A8FFB3227C6748002A9CCB /* ViewController.swift in Sources */,
 				50A8FFB1227C6748002A9CCB /* AppDelegate.swift in Sources */,
+				50A8FFD7227C6FC0002A9CCB /* Houses.swift in Sources */,
+				50A8FFD2227C6905002A9CCB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +517,7 @@
 		};
 		50A8FFCB227C674C002A9CCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EA194602BB2B9FC3C428E8D /* Pods-Makelaars020.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +536,7 @@
 		};
 		50A8FFCC227C674C002A9CCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C125877B5E07F1EEBDD40F2 /* Pods-Makelaars020.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +555,7 @@
 		};
 		50A8FFCE227C674C002A9CCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76C2674077F63BAD4E7EFC8B /* Pods-Makelaars020Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +577,7 @@
 		};
 		50A8FFCF227C674C002A9CCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 612329B9CF5934536CA72054 /* Pods-Makelaars020Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import OHHTTPStubs
 @testable import Makelaars020
 
 class Makelaars020Tests: XCTestCase {
@@ -20,8 +21,35 @@ class Makelaars020Tests: XCTestCase {
     }
 
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        if let path = Bundle.main.path(forResource: "houses1", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                do {
+                    let houses: Houses? = try Houses.init(data: data)
+                    guard let objects = houses?.objects else {
+                        XCTFail()
+                        return
+                    }
+                    let house: Object = objects[0]
+                    
+                    XCTAssert(house.postcode == "1067WR", "parsing failed, postcode = \(house.postcode)")
+                    
+                } catch {
+                    print("error parsing; \(error)")
+                    XCTFail()
+                }
+                
+            } catch {
+                // handle error
+                print("error: \(error)")
+                XCTFail()
+            }
+        } else {
+            XCTFail()
+        }
+        
+        
     }
 
     func testPerformanceExample() {
