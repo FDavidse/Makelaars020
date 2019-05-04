@@ -64,10 +64,10 @@ class Makelaars020Tests: XCTestCase {
                         XCTFail()
                         return
                     }
-                    XCTAssert((houses?.objects?.count)! == 24, "haven't parsed all 25 houses, count is: \((houses?.objects?.count)!)")
+                    XCTAssert((houses?.objects?.count)! == 25, "haven't parsed all 25 houses, count is: \((houses?.objects?.count)!)")
                     let house: Object = objects[0]
                     
-                    XCTAssert(house.postcode == "1067WR", "parsing failed, postcode = \(house.postcode)")
+                    XCTAssert(house.postcode == "1013BD", "parsing failed, postcode = \(house.postcode)")
                     
                 } catch {
                     print("error parsing; \(error)")
@@ -97,10 +97,10 @@ class Makelaars020Tests: XCTestCase {
                         XCTFail()
                         return
                     }
-                    XCTAssert((houses?.objects?.count)! == 24, "haven't parsed all 25 houses, count is: \((houses?.objects?.count)!)")
+                    XCTAssert((houses?.objects?.count)! == 25, "haven't parsed all 25 houses, count is: \((houses?.objects?.count)!)")
                     let house: Object = objects[0]
                     
-                    XCTAssert(house.postcode == "1067WR", "parsing failed, postcode = \(house.postcode)")
+                    XCTAssert(house.postcode == "1015DT", "parsing failed, postcode = \(house.postcode)")
                     
                 } catch {
                     print("error parsing; \(error)")

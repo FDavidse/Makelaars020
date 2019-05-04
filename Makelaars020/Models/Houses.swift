@@ -57,7 +57,7 @@ struct Object: Codable {
     let afstand: Int?
     let bronCode: String?
     let childrenObjects: [JSONAny]?
-    let datumAanvaarding, datumOndertekeningAkte: JSONNull?
+    let datumAanvaarding, datumOndertekeningAkte: String?
     let foto, fotoLarge, fotoLargest, fotoMedium: String?
     let fotoSecure: String?
     let gewijzigdDatum: JSONNull?
@@ -304,7 +304,7 @@ enum Woonplaats: String, Codable {
 struct Paging: Codable {
     let aantalPaginas, huidigePagina: Int?
     let volgendeURL: String?
-    let vorigeURL: JSONNull?
+    let vorigeURL: String?
     
     enum CodingKeys: String, CodingKey {
         case aantalPaginas = "AantalPaginas"
@@ -429,8 +429,8 @@ extension Object {
         afstand: Int?? = nil,
         bronCode: String?? = nil,
         childrenObjects: [JSONAny]?? = nil,
-        datumAanvaarding: JSONNull?? = nil,
-        datumOndertekeningAkte: JSONNull?? = nil,
+        datumAanvaarding: String?? = nil,
+        datumOndertekeningAkte: String?? = nil,
         foto: String?? = nil,
         fotoLarge: String?? = nil,
         fotoLargest: String?? = nil,
@@ -786,7 +786,7 @@ extension Paging {
         aantalPaginas: Int?? = nil,
         huidigePagina: Int?? = nil,
         volgendeURL: String?? = nil,
-        vorigeURL: JSONNull?? = nil
+        vorigeURL: String?? = nil
         ) -> Paging {
         return Paging(
             aantalPaginas: aantalPaginas ?? self.aantalPaginas,
