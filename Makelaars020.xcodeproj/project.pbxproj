@@ -29,6 +29,8 @@
 		50C099D7227DA27900D34A92 /* houses21.json in Resources */ = {isa = PBXBuildFile; fileRef = 50C099D6227DA27900D34A92 /* houses21.json */; };
 		50C099D8227DA6FE00D34A92 /* houses21.json in Resources */ = {isa = PBXBuildFile; fileRef = 50C099D6227DA27900D34A92 /* houses21.json */; };
 		50C099D9227DA70100D34A92 /* houses20.json in Resources */ = {isa = PBXBuildFile; fileRef = 50C099D4227DA25B00D34A92 /* houses20.json */; };
+		50C099DB227DB34F00D34A92 /* houses2.json in Resources */ = {isa = PBXBuildFile; fileRef = 50C099DA227DB34F00D34A92 /* houses2.json */; };
+		50C099DC227DC67800D34A92 /* houses2.json in Resources */ = {isa = PBXBuildFile; fileRef = 50C099DA227DB34F00D34A92 /* houses2.json */; };
 		DF5DDA5BE27963685A081D19 /* Pods_Makelaars020Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CD43BAD95EA530EE0C5785 /* Pods_Makelaars020Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,7 @@
 		50C099D2227D874700D34A92 /* HousePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePresenter.swift; sourceTree = "<group>"; };
 		50C099D4227DA25B00D34A92 /* houses20.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses20.json; sourceTree = "<group>"; };
 		50C099D6227DA27900D34A92 /* houses21.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses21.json; sourceTree = "<group>"; };
+		50C099DA227DB34F00D34A92 /* houses2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses2.json; sourceTree = "<group>"; };
 		612329B9CF5934536CA72054 /* Pods-Makelaars020Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makelaars020Tests.release.xcconfig"; path = "Target Support Files/Pods-Makelaars020Tests/Pods-Makelaars020Tests.release.xcconfig"; sourceTree = "<group>"; };
 		76C2674077F63BAD4E7EFC8B /* Pods-Makelaars020Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makelaars020Tests.debug.xcconfig"; path = "Target Support Files/Pods-Makelaars020Tests/Pods-Makelaars020Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3CD43BAD95EA530EE0C5785 /* Pods_Makelaars020Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makelaars020Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +195,7 @@
 				50A8FFD9227C6FEB002A9CCB /* houses1.json */,
 				50C099D4227DA25B00D34A92 /* houses20.json */,
 				50C099D6227DA27900D34A92 /* houses21.json */,
+				50C099DA227DB34F00D34A92 /* houses2.json */,
 			);
 			path = TestsJsons;
 			sourceTree = "<group>";
@@ -318,6 +322,7 @@
 				50C099D8227DA6FE00D34A92 /* houses21.json in Resources */,
 				50A8FFEA227C7758002A9CCB /* ResultsViewController.xib in Resources */,
 				50A8FFDB227C6FEE002A9CCB /* houses1.json in Resources */,
+				50C099DC227DC67800D34A92 /* houses2.json in Resources */,
 				50A8FFBB227C674C002A9CCB /* LaunchScreen.storyboard in Resources */,
 				50A8FFB8227C674C002A9CCB /* Assets.xcassets in Resources */,
 				50A8FFB6227C6748002A9CCB /* Main.storyboard in Resources */,
@@ -331,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50C099D5227DA25B00D34A92 /* houses20.json in Resources */,
+				50C099DB227DB34F00D34A92 /* houses2.json in Resources */,
 				50A8FFDA227C6FEB002A9CCB /* houses1.json in Resources */,
 				50C099D7227DA27900D34A92 /* houses21.json in Resources */,
 			);

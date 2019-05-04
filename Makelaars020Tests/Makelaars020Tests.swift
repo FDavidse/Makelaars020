@@ -117,11 +117,55 @@ class Makelaars020Tests: XCTestCase {
         }
         
     }
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testHouseManager() {
+        
+        //given
+        let sut = HousesManager.init(apiService: ApiServiceStub())
+        
+        let expectation = XCTestExpectation.init(description: "retrieving and parsing houses")
+        //when
+        sut.retrieveHousesFor(type: "koop", keys: ["/amsterdam"], page: 2, pageSize: 25, withResult: { (houses) in
+            //then
+            XCTAssert(houses.objects?.count == 25, "houses count is not 25 but: \(houses.objects?.count)")
+            expectation.fulfill()
+            
+        }) { (error) in
+            print("Retrieving failed with error: \(error)")
+            XCTFail()
+            expectation.fulfill()
         }
-    }
+        
+        wait(for: [expectation], timeout: 5.0)
 
+        
+    }
+    
+    struct ApiServiceStub:HouseAPIServiceInterface {
+        
+        func retrieveHousesFor(type: String, keys: [String], page: Int, pageSize: Int, withSuccess: @escaping ((Data) -> Void), failure: @escaping ((APIError?) -> Void)) {
+            
+            if let path = Bundle.main.path(forResource: "houses2", ofType: "json") {
+                do {
+                    let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                   
+                    withSuccess(data)
+                    
+                } catch {
+                    // handle error
+                    print("error: \(error)")
+                    let error: APIError = .unknown("\(error)")
+                    failure(error)
+                   
+                }
+            } else {
+                let error: APIError = .unknown("test file couldn't be found")
+                failure(error)
+            }
+            
+        }
+        
+        
+    }
+    
 }

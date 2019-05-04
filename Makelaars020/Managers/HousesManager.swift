@@ -10,11 +10,12 @@ import Foundation
 
 protocol HousesManagerInterface {
     
-    func retrieveHousesFor(type:String, keys:[String], page: Int, pageSize: Int, withResult: @escaping ((Houses) -> Void))
+    func retrieveHousesFor(type:String, keys:[String], page: Int, pageSize: Int, withResult: @escaping ((Houses) -> Void), failure:@escaping (APIError?) -> Void)
     
 }
 
 class HousesManager: HousesManagerInterface {
+    
     
     let apiService: HouseAPIServiceInterface
     
@@ -24,17 +25,26 @@ class HousesManager: HousesManagerInterface {
         
     }
     
-    func retrieveHousesFor(type: String, keys: [String], page: Int, pageSize: Int, withResult: @escaping ((Houses) -> Void)) {
+
+    func retrieveHousesFor(type: String, keys: [String], page: Int, pageSize: Int, withResult: @escaping ((Houses) -> Void), failure: @escaping (APIError?) -> Void) {
         
-    
         apiService.retrieveHousesFor(type: type, keys: keys, page: page, pageSize: pageSize, withSuccess: { (data) in
+            
+            if let houses: Houses = try? Houses.init(data: data) {
+                withResult(houses)
+            } else {
+                let apiError:APIError = .unknown("Problem parsing the data")
+                failure(apiError)
+            }
             
         }) { (error) in
             
+            let apiError:APIError = .unknown("\(String(describing: error))")
+            failure(apiError)
         }
         
-        
     }
-        
+    
+    
     
 }
