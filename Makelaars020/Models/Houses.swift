@@ -52,10 +52,10 @@ struct Object: Codable {
     let aantalBeschikbaar: JSONNull?
     let aantalKamers: Int?
     let aantalKavels: JSONNull?
-    let aanvaarding: Aanvaarding?
+    let aanvaarding: String?
     let adres: String?
     let afstand: Int?
-    let bronCode: BronCode?
+    let bronCode: String?
     let childrenObjects: [JSONAny]?
     let datumAanvaarding, datumOndertekeningAkte: JSONNull?
     let foto, fotoLarge, fotoLargest, fotoMedium: String?
@@ -72,7 +72,7 @@ struct Object: Codable {
     let indTransactieMakelaarTonen: JSONNull?
     let isSearchable, isVerhuurd, isVerkocht, isVerkochtOfVerhuurd: Bool?
     let koopprijs: Int?
-    let koopprijsFormaat: KoopprijsFormaat?
+    let koopprijsFormaat: String?
     let koopprijsTot, makelaarID: Int?
     let makelaarNaam: String?
     let mobileURL: String?
@@ -187,27 +187,13 @@ enum AanmeldDatum: String, Codable {
     case date12623004000000100 = "/Date(1262300400000+0100)/"
 }
 
-enum Aanvaarding: String, Codable {
-    case inOverleg = "InOverleg"
-}
-
-enum BronCode: String, Codable {
-    case mzv = "MZV"
-    case nvm = "NVM"
-    case vbo = "VBO"
-}
-
-enum KoopprijsFormaat: String, Codable {
-    case koopPrijsKostenKoperKort = "<[KoopPrijs]> <{kosten koper|kort}>"
-}
-
 struct Prijs: Codable {
     let geenExtraKosten: Bool?
     let huurAbbreviation: String?
     let huurprijs: JSONNull?
     let huurprijsOpAanvraag: String?
     let huurprijsTot: JSONNull?
-    let koopAbbreviation: KoopAbbreviation?
+    let koopAbbreviation: String?
     let koopprijs: Int?
     let koopprijsOpAanvraag: String?
     let koopprijsTot: Int?
@@ -227,10 +213,6 @@ struct Prijs: Codable {
         case originelePrijs = "OriginelePrijs"
         case veilingText = "VeilingText"
     }
-}
-
-enum KoopAbbreviation: String, Codable {
-    case kK = "k.k."
 }
 
 enum Producten: String, Codable {
@@ -442,10 +424,10 @@ extension Object {
         aantalBeschikbaar: JSONNull?? = nil,
         aantalKamers: Int?? = nil,
         aantalKavels: JSONNull?? = nil,
-        aanvaarding: Aanvaarding?? = nil,
+        aanvaarding: String?? = nil,
         adres: String?? = nil,
         afstand: Int?? = nil,
-        bronCode: BronCode?? = nil,
+        bronCode: String?? = nil,
         childrenObjects: [JSONAny]?? = nil,
         datumAanvaarding: JSONNull?? = nil,
         datumOndertekeningAkte: JSONNull?? = nil,
@@ -477,7 +459,7 @@ extension Object {
         isVerkocht: Bool?? = nil,
         isVerkochtOfVerhuurd: Bool?? = nil,
         koopprijs: Int?? = nil,
-        koopprijsFormaat: KoopprijsFormaat?? = nil,
+        koopprijsFormaat: String?? = nil,
         koopprijsTot: Int?? = nil,
         makelaarID: Int?? = nil,
         makelaarNaam: String?? = nil,
@@ -627,7 +609,7 @@ extension Prijs {
         huurprijs: JSONNull?? = nil,
         huurprijsOpAanvraag: String?? = nil,
         huurprijsTot: JSONNull?? = nil,
-        koopAbbreviation: KoopAbbreviation?? = nil,
+        koopAbbreviation: String?? = nil,
         koopprijs: Int?? = nil,
         koopprijsOpAanvraag: String?? = nil,
         koopprijsTot: Int?? = nil,

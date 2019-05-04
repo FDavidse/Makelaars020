@@ -18,6 +18,17 @@
 		50A8FFD7227C6FC0002A9CCB /* Houses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A8FFD6227C6FC0002A9CCB /* Houses.swift */; };
 		50A8FFDA227C6FEB002A9CCB /* houses1.json in Resources */ = {isa = PBXBuildFile; fileRef = 50A8FFD9227C6FEB002A9CCB /* houses1.json */; };
 		50A8FFDB227C6FEE002A9CCB /* houses1.json in Resources */ = {isa = PBXBuildFile; fileRef = 50A8FFD9227C6FEB002A9CCB /* houses1.json */; };
+		50A8FFE5227C7641002A9CCB /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A8FFE3227C7641002A9CCB /* ListTableViewCell.swift */; };
+		50A8FFE6227C7641002A9CCB /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A8FFE4227C7641002A9CCB /* ListTableViewCell.xib */; };
+		50A8FFE9227C7758002A9CCB /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A8FFE7227C7758002A9CCB /* ResultsViewController.swift */; };
+		50A8FFEA227C7758002A9CCB /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A8FFE8227C7758002A9CCB /* ResultsViewController.xib */; };
+		50A8FFED227CAD1C002A9CCB /* HousesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A8FFEC227CAD1C002A9CCB /* HousesManager.swift */; };
+		50C099D1227D873C00D34A92 /* HouseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C099D0227D873C00D34A92 /* HouseAPIService.swift */; };
+		50C099D3227D874700D34A92 /* HousePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C099D2227D874700D34A92 /* HousePresenter.swift */; };
+		50C099D5227DA25B00D34A92 /* houses20.json in Resources */ = {isa = PBXBuildFile; fileRef = 50C099D4227DA25B00D34A92 /* houses20.json */; };
+		50C099D7227DA27900D34A92 /* houses21.json in Resources */ = {isa = PBXBuildFile; fileRef = 50C099D6227DA27900D34A92 /* houses21.json */; };
+		50C099D8227DA6FE00D34A92 /* houses21.json in Resources */ = {isa = PBXBuildFile; fileRef = 50C099D6227DA27900D34A92 /* houses21.json */; };
+		50C099D9227DA70100D34A92 /* houses20.json in Resources */ = {isa = PBXBuildFile; fileRef = 50C099D4227DA25B00D34A92 /* houses20.json */; };
 		DF5DDA5BE27963685A081D19 /* Pods_Makelaars020Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CD43BAD95EA530EE0C5785 /* Pods_Makelaars020Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +59,15 @@
 		50A8FFD1227C6905002A9CCB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		50A8FFD6227C6FC0002A9CCB /* Houses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Houses.swift; sourceTree = "<group>"; };
 		50A8FFD9227C6FEB002A9CCB /* houses1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses1.json; sourceTree = "<group>"; };
+		50A8FFE3227C7641002A9CCB /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		50A8FFE4227C7641002A9CCB /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		50A8FFE7227C7758002A9CCB /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		50A8FFE8227C7758002A9CCB /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
+		50A8FFEC227CAD1C002A9CCB /* HousesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesManager.swift; sourceTree = "<group>"; };
+		50C099D0227D873C00D34A92 /* HouseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseAPIService.swift; sourceTree = "<group>"; };
+		50C099D2227D874700D34A92 /* HousePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePresenter.swift; sourceTree = "<group>"; };
+		50C099D4227DA25B00D34A92 /* houses20.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses20.json; sourceTree = "<group>"; };
+		50C099D6227DA27900D34A92 /* houses21.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses21.json; sourceTree = "<group>"; };
 		612329B9CF5934536CA72054 /* Pods-Makelaars020Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makelaars020Tests.release.xcconfig"; path = "Target Support Files/Pods-Makelaars020Tests/Pods-Makelaars020Tests.release.xcconfig"; sourceTree = "<group>"; };
 		76C2674077F63BAD4E7EFC8B /* Pods-Makelaars020Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makelaars020Tests.debug.xcconfig"; path = "Target Support Files/Pods-Makelaars020Tests/Pods-Makelaars020Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3CD43BAD95EA530EE0C5785 /* Pods_Makelaars020Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makelaars020Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +125,9 @@
 		50A8FFAF227C6748002A9CCB /* Makelaars020 */ = {
 			isa = PBXGroup;
 			children = (
+				50C099CF227D872600D34A92 /* APIService */,
+				50C099CE227D872000D34A92 /* Presenters */,
+				50A8FFEB227CAD0A002A9CCB /* Managers */,
 				50A8FFD5227C6FB3002A9CCB /* Models */,
 				50A8FFD4227C69BE002A9CCB /* Viewcontrollers */,
 				50A8FFD3227C6935002A9CCB /* Views */,
@@ -140,6 +163,8 @@
 		50A8FFD3227C6935002A9CCB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				50A8FFE3227C7641002A9CCB /* ListTableViewCell.swift */,
+				50A8FFE4227C7641002A9CCB /* ListTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +172,8 @@
 		50A8FFD4227C69BE002A9CCB /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				50A8FFE7227C7758002A9CCB /* ResultsViewController.swift */,
+				50A8FFE8227C7758002A9CCB /* ResultsViewController.xib */,
 			);
 			path = Viewcontrollers;
 			sourceTree = "<group>";
@@ -163,8 +190,34 @@
 			isa = PBXGroup;
 			children = (
 				50A8FFD9227C6FEB002A9CCB /* houses1.json */,
+				50C099D4227DA25B00D34A92 /* houses20.json */,
+				50C099D6227DA27900D34A92 /* houses21.json */,
 			);
 			path = TestsJsons;
+			sourceTree = "<group>";
+		};
+		50A8FFEB227CAD0A002A9CCB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				50A8FFEC227CAD1C002A9CCB /* HousesManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		50C099CE227D872000D34A92 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				50C099D2227D874700D34A92 /* HousePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		50C099CF227D872600D34A92 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				50C099D0227D873C00D34A92 /* HouseAPIService.swift */,
+			);
+			path = APIService;
 			sourceTree = "<group>";
 		};
 		D9EE19097038CF29CBF9FDA0 /* Pods */ = {
@@ -175,7 +228,6 @@
 				76C2674077F63BAD4E7EFC8B /* Pods-Makelaars020Tests.debug.xcconfig */,
 				612329B9CF5934536CA72054 /* Pods-Makelaars020Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -263,10 +315,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50C099D8227DA6FE00D34A92 /* houses21.json in Resources */,
+				50A8FFEA227C7758002A9CCB /* ResultsViewController.xib in Resources */,
 				50A8FFDB227C6FEE002A9CCB /* houses1.json in Resources */,
 				50A8FFBB227C674C002A9CCB /* LaunchScreen.storyboard in Resources */,
 				50A8FFB8227C674C002A9CCB /* Assets.xcassets in Resources */,
 				50A8FFB6227C6748002A9CCB /* Main.storyboard in Resources */,
+				50C099D9227DA70100D34A92 /* houses20.json in Resources */,
+				50A8FFE6227C7641002A9CCB /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +330,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50C099D5227DA25B00D34A92 /* houses20.json in Resources */,
 				50A8FFDA227C6FEB002A9CCB /* houses1.json in Resources */,
+				50C099D7227DA27900D34A92 /* houses21.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,9 +413,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				50A8FFB3227C6748002A9CCB /* ViewController.swift in Sources */,
+				50A8FFED227CAD1C002A9CCB /* HousesManager.swift in Sources */,
+				50C099D3227D874700D34A92 /* HousePresenter.swift in Sources */,
 				50A8FFB1227C6748002A9CCB /* AppDelegate.swift in Sources */,
 				50A8FFD7227C6FC0002A9CCB /* Houses.swift in Sources */,
 				50A8FFD2227C6905002A9CCB /* Constants.swift in Sources */,
+				50A8FFE5227C7641002A9CCB /* ListTableViewCell.swift in Sources */,
+				50A8FFE9227C7758002A9CCB /* ResultsViewController.swift in Sources */,
+				50C099D1227D873C00D34A92 /* HouseAPIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

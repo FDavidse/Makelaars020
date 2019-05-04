@@ -7,5 +7,8 @@
 //
 
 struct Constants {
+    
     static let key = "ac1b0b1572524640a0ecc54de453ea9f"
+    static let baseUrl = "http://partnerapi.funda.nl/feeds/Aanbod.svc/json/"
+    
 }
