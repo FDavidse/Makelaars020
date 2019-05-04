@@ -28,6 +28,14 @@ class ResultsViewController: UIViewController {
     var searchState: SearchState
     let housePresenter: HousePresenterInterface
     
+    var makelaars:[Makelaar] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.table.reloadData()
+            }
+        }
+    }
+    
     convenience init() {
         self.init(state: .all)
     }
@@ -62,6 +70,25 @@ class ResultsViewController: UIViewController {
         default:
             self.title = "All houses with garden in Amsterdam"
         }
+        
+        loadData()
+        
+    }
+    
+    func loadData() {
+        
+        housePresenter.getMostActiveMakelaars(withResult: { [weak self] (makelaars) in
+            
+            guard let strongSelf = self else { return }
+            strongSelf.makelaars = makelaars
+            
+        }) { [weak self] (error) in
+            
+            guard let strongSelf = self else { return }
+            strongSelf.showPopupWith(title: "Problem retrieving data", message: "\(String(describing: error))")
+            
+        }
+        
     }
     
     func setUpTable() {
@@ -79,20 +106,18 @@ class ResultsViewController: UIViewController {
 extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return makelaars.count
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 180
-//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
         UITableViewCell {
             
-           
+           let makelaar = makelaars[indexPath.row]
             
             if let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier) as? ListTableViewCell {
                 
+                cell.agentLabel.text = makelaar.name + "\n makelaar id: \(makelaar.makelaarId)"
+            
                 return cell
                 
             } else {
@@ -101,15 +126,5 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
             
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        let detail = MovieDetailViewController()
-//        self.navigationController?.pushViewController(detail, animated: true)
-//        let movie = movies[indexPath.row]
-//        
-//        detail.title = movie.title
-//        detail.movieId = movie.id
-        
-    }
-    
+
 }

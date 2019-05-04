@@ -31,6 +31,8 @@
 		50C099D9227DA70100D34A92 /* houses20.json in Resources */ = {isa = PBXBuildFile; fileRef = 50C099D4227DA25B00D34A92 /* houses20.json */; };
 		50C099DB227DB34F00D34A92 /* houses2.json in Resources */ = {isa = PBXBuildFile; fileRef = 50C099DA227DB34F00D34A92 /* houses2.json */; };
 		50C099DC227DC67800D34A92 /* houses2.json in Resources */ = {isa = PBXBuildFile; fileRef = 50C099DA227DB34F00D34A92 /* houses2.json */; };
+		50C099DE227DC73100D34A92 /* Makelaar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C099DD227DC73100D34A92 /* Makelaar.swift */; };
+		50C099E1227DCA8300D34A92 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C099E0227DCA8300D34A92 /* UIViewController+Utils.swift */; };
 		DF5DDA5BE27963685A081D19 /* Pods_Makelaars020Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CD43BAD95EA530EE0C5785 /* Pods_Makelaars020Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		50C099D4227DA25B00D34A92 /* houses20.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses20.json; sourceTree = "<group>"; };
 		50C099D6227DA27900D34A92 /* houses21.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses21.json; sourceTree = "<group>"; };
 		50C099DA227DB34F00D34A92 /* houses2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses2.json; sourceTree = "<group>"; };
+		50C099DD227DC73100D34A92 /* Makelaar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Makelaar.swift; sourceTree = "<group>"; };
+		50C099E0227DCA8300D34A92 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		612329B9CF5934536CA72054 /* Pods-Makelaars020Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makelaars020Tests.release.xcconfig"; path = "Target Support Files/Pods-Makelaars020Tests/Pods-Makelaars020Tests.release.xcconfig"; sourceTree = "<group>"; };
 		76C2674077F63BAD4E7EFC8B /* Pods-Makelaars020Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makelaars020Tests.debug.xcconfig"; path = "Target Support Files/Pods-Makelaars020Tests/Pods-Makelaars020Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3CD43BAD95EA530EE0C5785 /* Pods_Makelaars020Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makelaars020Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +132,7 @@
 		50A8FFAF227C6748002A9CCB /* Makelaars020 */ = {
 			isa = PBXGroup;
 			children = (
+				50C099DF227DCA7200D34A92 /* Extensions */,
 				50C099CF227D872600D34A92 /* APIService */,
 				50C099CE227D872000D34A92 /* Presenters */,
 				50A8FFEB227CAD0A002A9CCB /* Managers */,
@@ -185,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				50A8FFD6227C6FC0002A9CCB /* Houses.swift */,
+				50C099DD227DC73100D34A92 /* Makelaar.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +228,14 @@
 				50C099D0227D873C00D34A92 /* HouseAPIService.swift */,
 			);
 			path = APIService;
+			sourceTree = "<group>";
+		};
+		50C099DF227DCA7200D34A92 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				50C099E0227DCA8300D34A92 /* UIViewController+Utils.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D9EE19097038CF29CBF9FDA0 /* Pods */ = {
@@ -424,7 +438,9 @@
 				50A8FFB1227C6748002A9CCB /* AppDelegate.swift in Sources */,
 				50A8FFD7227C6FC0002A9CCB /* Houses.swift in Sources */,
 				50A8FFD2227C6905002A9CCB /* Constants.swift in Sources */,
+				50C099E1227DCA8300D34A92 /* UIViewController+Utils.swift in Sources */,
 				50A8FFE5227C7641002A9CCB /* ListTableViewCell.swift in Sources */,
+				50C099DE227DC73100D34A92 /* Makelaar.swift in Sources */,
 				50A8FFE9227C7758002A9CCB /* ResultsViewController.swift in Sources */,
 				50C099D1227D873C00D34A92 /* HouseAPIService.swift in Sources */,
 			);

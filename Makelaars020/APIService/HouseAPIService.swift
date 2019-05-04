@@ -50,11 +50,11 @@ class HouseAPIService: HouseAPIServiceInterface {
             "cache-control": "no-cache"
         ]
         
-        let params: String = keys.reduce("/") { (first, second) -> String in
+        let params: String = keys.reduce("") { (first, second) -> String in
             first + "/" + second
         }
         
-        let urlString: String = self.baseUrl + self.apiKey + "/" + "/?\(type)" + "?zo=" + params + "&page=\(page)" + "&pagesize=\(pageSize)"
+        let urlString: String = self.baseUrl + self.apiKey + "/" + "?type=\(type)" + "&zo=" + params + "&page=\(page)" + "&pagesize=\(pageSize)"
         
         guard let url = URL(string: urlString) else { return }
         
@@ -62,7 +62,8 @@ class HouseAPIService: HouseAPIServiceInterface {
         let request = NSMutableURLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
         request.httpMethod = "GET"
         //request.allHTTPHeaderFields = headers
-        
+        //http://partnerapi.funda.nl/feeds/Aanbod.svc/json/ac1b0b1572524640a0ecc54de453ea9f/?type=koop&zo=/amsterdam/tuin&page=2&pagesize=25
+        //"http://partnerapi.funda.nl/feeds/Aanbod.svc/json/ac1b0b1572524640a0ecc54de453ea9f/type=koop&zo=/amsterdam&page=1&pagesize=25"
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             

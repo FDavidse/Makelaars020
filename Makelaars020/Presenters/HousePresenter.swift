@@ -10,6 +10,9 @@ import Foundation
 
 protocol HousePresenterInterface {
     
+    func getMostActiveMakelaars(withResult: @escaping (([Makelaar]) -> Void), failure:@escaping (APIError?) -> Void)
+
+    
 }
 
 class HousePresenter: HousePresenterInterface {
@@ -21,5 +24,15 @@ class HousePresenter: HousePresenterInterface {
         self.manager = manager
         
     }
+    
+    func getMostActiveMakelaars(withResult: @escaping (([Makelaar]) -> Void), failure: @escaping (APIError?) -> Void) {
+        
+        manager.retrieveMostActiveMakelaars(withResult: { (makelaars) in
+            withResult(makelaars)
+        }) { (error) in
+            failure(error)
+        }
+    }
+  
     
 }

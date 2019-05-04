@@ -1062,3 +1062,30 @@ fileprivate func newJSONEncoder() -> JSONEncoder {
     return encoder
 }
 
+extension Houses {
+    
+    func getMakelaars() -> [Makelaar] {
+        
+        var allMakelaars: [Makelaar] = []
+        
+        self.objects?.forEach({ (object) in
+            
+            if let id = object.makelaarID, let name = object.makelaarNaam {
+                let makelaar: Makelaar = Makelaar.init(name:name, makelaarId:id)
+                
+                if allMakelaars.first(where: { (item) -> Bool in
+                    return item.makelaarId == makelaar.makelaarId
+                }) == nil {
+                    allMakelaars.append(makelaar)
+                }
+                
+            }
+        })
+        
+        return allMakelaars
+        
+    }
+    
+    
+    
+}

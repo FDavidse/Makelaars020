@@ -12,10 +12,11 @@ protocol HousesManagerInterface {
     
     func retrieveHousesFor(type:String, keys:[String], page: Int, pageSize: Int, withResult: @escaping ((Houses) -> Void), failure:@escaping (APIError?) -> Void)
     
+    func retrieveMostActiveMakelaars(withResult: @escaping (([Makelaar]) -> Void), failure:@escaping (APIError?) -> Void)
+    
 }
 
 class HousesManager: HousesManagerInterface {
-    
     
     let apiService: HouseAPIServiceInterface
     
@@ -46,5 +47,17 @@ class HousesManager: HousesManagerInterface {
     }
     
     
-    
+    func retrieveMostActiveMakelaars(withResult: @escaping (([Makelaar]) -> Void), failure: @escaping (APIError?) -> Void) {
+        
+        self.retrieveHousesFor(type: "koop", keys: ["amsterdam"], page: 1, pageSize: 25, withResult: { (houses) in
+            
+            let makelaars = houses.getMakelaars()
+            withResult(makelaars)
+            
+        }) { (error) in
+            failure(error)
+        }
+        
+    }
+  
 }
