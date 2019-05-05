@@ -19,7 +19,12 @@ class Makelaars020Tests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
+    
+    /* below are some examples of tests for this project
+        I intended to use OHHTTPStubs to test the networklayer in another way as well, but didn't get round to it
+    */
+    
     ///Parse houses for page 1
     func testParseHouses1() {
         
@@ -37,7 +42,6 @@ class Makelaars020Tests: XCTestCase {
                     XCTAssert(house.postcode == "1067WR", "parsing failed, postcode = \(house.postcode)")
                     
                 } catch {
-                    print("error parsing; \(error)")
                     XCTFail()
                 }
                 
@@ -202,8 +206,5 @@ class Makelaars020Tests: XCTestCase {
             }
             
         }
-        
-        
     }
-    
 }

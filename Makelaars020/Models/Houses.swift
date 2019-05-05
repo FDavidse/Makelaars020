@@ -81,21 +81,21 @@ struct Object: Codable {
     let prijsGeformatteerdHTML, prijsGeformatteerdTextHuur, prijsGeformatteerdTextKoop: String?
     let producten: [String]?
     let project: Project?
-    let projectNaam: JSONNull?
+    let projectNaam: String?
     let promoLabel: PromoLabel?
     let publicatieDatum: String?
     let publicatieStatus: Int?
     let savedDate: JSONNull?
-    let soortAanbod: SoortAanbod?
+    let soortAanbod: String?
     let objectSoortAanbod: Int?
     let startOplevering, timeAgoText, transactieAfmeldDatum, transactieMakelaarID: JSONNull?
     let transactieMakelaarNaam: JSONNull?
     let typeProject: Int?
     let url: String?
-    let verkoopStatus: VerkoopStatus?
+    let verkoopStatus: String?
     let wgs84X, wgs84Y: Double?
     let woonOppervlakteTot, woonoppervlakte: Int?
-    let woonplaats: Woonplaats?
+    let woonplaats: String?
     let zoekType: [Int]?
     
     enum CodingKeys: String, CodingKey {
@@ -219,7 +219,8 @@ struct Project: Codable {
     let indIpix, indPDF, indPlattegrond, indTop: Bool?
     let indVideo: Bool?
     let internalID: String?
-    let maxWoonoppervlakte, minWoonoppervlakte, naam, omschrijving: JSONNull?
+    //var naam: String?
+    let maxWoonoppervlakte, minWoonoppervlakte, omschrijving: JSONNull?
     let openHuizen: [JSONAny]?
     let plaats, prijs, prijsGeformatteerd, publicatieDatum: JSONNull?
     let type: Int?
@@ -242,7 +243,6 @@ struct Project: Codable {
         case internalID = "InternalId"
         case maxWoonoppervlakte = "MaxWoonoppervlakte"
         case minWoonoppervlakte = "MinWoonoppervlakte"
-        case naam = "Naam"
         case omschrijving = "Omschrijving"
         case openHuizen = "OpenHuizen"
         case plaats = "Plaats"
@@ -274,19 +274,6 @@ struct PromoLabel: Codable {
         case ribbonText = "RibbonText"
         case tagline = "Tagline"
     }
-}
-
-enum SoortAanbod: String, Codable {
-    case appartement = "appartement"
-    case woonhuis = "woonhuis"
-}
-
-enum VerkoopStatus: String, Codable {
-    case statusBeschikbaar = "StatusBeschikbaar"
-}
-
-enum Woonplaats: String, Codable {
-    case amsterdam = "Amsterdam"
 }
 
 struct Paging: Codable {
@@ -463,12 +450,12 @@ extension Object {
         prijsGeformatteerdTextKoop: String?? = nil,
         producten: [String]?? = nil,
         project: Project?? = nil,
-        projectNaam: JSONNull?? = nil,
+        projectNaam: String?? = nil,
         promoLabel: PromoLabel?? = nil,
         publicatieDatum: String?? = nil,
         publicatieStatus: Int?? = nil,
         savedDate: JSONNull?? = nil,
-        soortAanbod: SoortAanbod?? = nil,
+        soortAanbod: String?? = nil,
         objectSoortAanbod: Int?? = nil,
         startOplevering: JSONNull?? = nil,
         timeAgoText: JSONNull?? = nil,
@@ -477,12 +464,12 @@ extension Object {
         transactieMakelaarNaam: JSONNull?? = nil,
         typeProject: Int?? = nil,
         url: String?? = nil,
-        verkoopStatus: VerkoopStatus?? = nil,
+        verkoopStatus: String?? = nil,
         wgs84X: Double?? = nil,
         wgs84Y: Double?? = nil,
         woonOppervlakteTot: Int?? = nil,
         woonoppervlakte: Int?? = nil,
-        woonplaats: Woonplaats?? = nil,
+        woonplaats: String?? = nil,
         zoekType: [Int]?? = nil
         ) -> Object {
         return Object(
@@ -661,7 +648,6 @@ extension Project {
         internalID: String?? = nil,
         maxWoonoppervlakte: JSONNull?? = nil,
         minWoonoppervlakte: JSONNull?? = nil,
-        naam: JSONNull?? = nil,
         omschrijving: JSONNull?? = nil,
         openHuizen: [JSONAny]?? = nil,
         plaats: JSONNull?? = nil,
@@ -688,7 +674,6 @@ extension Project {
             internalID: internalID ?? self.internalID,
             maxWoonoppervlakte: maxWoonoppervlakte ?? self.maxWoonoppervlakte,
             minWoonoppervlakte: minWoonoppervlakte ?? self.minWoonoppervlakte,
-            naam: naam ?? self.naam,
             omschrijving: omschrijving ?? self.omschrijving,
             openHuizen: openHuizen ?? self.openHuizen,
             plaats: plaats ?? self.plaats,

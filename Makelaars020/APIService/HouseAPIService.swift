@@ -19,7 +19,7 @@ protocol HouseAPIServiceInterface {
     
     func retrieveHousesFor(type:String, keys:[String], page: Int, pageSize: Int, withSuccess: @escaping ((Data) -> Void), failure: @escaping ((APIError?) -> Void))
     
-    
+    func cancelCurrentOperations()
 }
 
 class HouseAPIService: HouseAPIServiceInterface {
@@ -38,32 +38,14 @@ class HouseAPIService: HouseAPIServiceInterface {
     
     func retrieveHousesFor(type: String, keys: [String], page: Int, pageSize: Int, withSuccess: @escaping ((Data) -> Void), failure: @escaping ((APIError?) -> Void)) {
         
-        let headers = [
-            "User-Agent": "PostmanRuntime/7.11.0",
-            "Accept": "*/*",
-            "Cache-Control": "no-cache",
-            "Postman-Token": "a8dd2149-b873-4802-ace7-4506d91e5526,48ff2a01-d5a7-43fc-b1ae-a2a39b180973",
-            "Host": "partnerapi.funda.nl",
-            "cookie": "SNLB2=12-002; .ASPXANONYMOUS=hPXL_zsCOxrXI5imLvTO70VeWZv3ql_vQcNNtsiF2JNYbW3I7HyxSlFMPlX5zonRxtyh6_I3BnX8wDf20KLAlnkmsxmH4G3UjCuDEZlqBXaZ1aCAuh2GsVVq9_Qx7-Xx7WtQCG1-j42vp2_RJEHkCNkuL601",
-            "accept-encoding": "gzip, deflate",
-            "Connection": "keep-alive",
-            "cache-control": "no-cache"
-        ]
-        
         let params: String = keys.reduce("") { (first, second) -> String in
             first + "/" + second
         }
         
         let urlString: String = self.baseUrl + self.apiKey + "/" + "?type=\(type)" + "&zo=" + params + "&page=\(page)" + "&pagesize=\(pageSize)"
-        
         guard let url = URL(string: urlString) else { return }
-        
-        
         let request = NSMutableURLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
         request.httpMethod = "GET"
-        //request.allHTTPHeaderFields = headers
-        //http://partnerapi.funda.nl/feeds/Aanbod.svc/json/ac1b0b1572524640a0ecc54de453ea9f/?type=koop&zo=/amsterdam/tuin&page=2&pagesize=25
-        //"http://partnerapi.funda.nl/feeds/Aanbod.svc/json/ac1b0b1572524640a0ecc54de453ea9f/type=koop&zo=/amsterdam&page=1&pagesize=25"
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             
@@ -76,17 +58,18 @@ class HouseAPIService: HouseAPIServiceInterface {
                     let error: APIError = .unknown("unknown error")
                     failure(error)
                 }
-            
             }
-           
         })
         
         dataTask.resume()
-        
    
     }
     
-    
-    
+    func cancelCurrentOperations() {
+        
+        let session = URLSession.shared
+        session.invalidateAndCancel()
+        
+    }
     
 }

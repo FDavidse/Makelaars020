@@ -54,11 +54,22 @@ extension Sequence where Iterator.Element == Makelaar {
             } else {
                 newArray.append(m)
             }
-            
         }
         
         return newArray
-        
     }
     
+    func getTopTen() -> [Makelaar] {
+        
+        var sortedList: [Makelaar] = self.sorted { (m1, m2) -> Bool in
+            return m1.housesUnderSale.count > m2.housesUnderSale.count
+        }
+        
+        var truncacted: [Makelaar] = []
+        for i in 0..<10 {
+            truncacted.append(sortedList[i])
+        }
+        
+        return truncacted
+    }
 }
