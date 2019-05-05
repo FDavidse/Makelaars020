@@ -184,6 +184,10 @@ class Makelaars020Tests: XCTestCase {
     }
     
     struct ApiServiceStub:HouseAPIServiceInterface {
+       
+        func cancelCurrentOperations() {
+            
+        }
         
         func retrieveHousesFor(type: String, keys: [String], page: Int, pageSize: Int, withSuccess: @escaping ((Data) -> Void), failure: @escaping ((APIError?) -> Void)) {
             
