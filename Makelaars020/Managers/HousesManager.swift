@@ -72,6 +72,7 @@ class HousesManager: HousesManagerInterface {
             if let count = houses.objects?.count {
                 if count != 0 {
                     strongSelf.page += 1
+                    print("page is now: \(strongSelf.page)")
                     strongSelf.retrieveMostActiveMakelaars(withResult: withResult, failure: failure)
                 }
             }

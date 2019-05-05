@@ -56,11 +56,12 @@ struct Object: Codable {
     let foto, fotoLarge, fotoLargest, fotoMedium: String?
     let fotoSecure: String?
     let gewijzigdDatum: JSONNull?
-    let globalID: Int?
+    let projectGlobalID: Int?
     let groupByObjectType: String?
     let heeft360GradenFoto, heeftBrochure, heeftOpenhuizenTopper, heeftOverbruggingsgrarantie: Bool?
     let heeftPlattegrond, heeftTophuis, heeftVeiling, heeftVideo: Bool?
-    let huurPrijsTot, huurprijs, huurprijsFormaat: JSONNull?
+    let huurPrijsTot, huurprijs: Int?
+    let huurprijsFormaat: String?
     let id: String?
     let inUnitsVanaf: JSONNull?
     let indProjectObjectType: Bool?
@@ -116,7 +117,7 @@ struct Object: Codable {
         case fotoMedium = "FotoMedium"
         case fotoSecure = "FotoSecure"
         case gewijzigdDatum = "GewijzigdDatum"
-        case globalID = "GlobalId"
+        case projectGlobalID = "GlobalId"
         case groupByObjectType = "GroupByObjectType"
         case heeft360GradenFoto = "Heeft360GradenFoto"
         case heeftBrochure = "HeeftBrochure"
@@ -185,14 +186,14 @@ enum AanmeldDatum: String, Codable {
 struct Prijs: Codable {
     let geenExtraKosten: Bool?
     let huurAbbreviation: String?
-    let huurprijs: JSONNull?
+    let huurprijs: Int?
     let huurprijsOpAanvraag: String?
-    let huurprijsTot: JSONNull?
+    let huurprijsTot: Int?
     let koopAbbreviation: String?
     let koopprijs: Int?
     let koopprijsOpAanvraag: String?
     let koopprijsTot: Int?
-    let originelePrijs: JSONNull?
+    let originelePrijs: Int?
     let veilingText: String?
     
     enum CodingKeys: String, CodingKey {
@@ -212,7 +213,8 @@ struct Prijs: Codable {
 
 struct Project: Codable {
     let aantalKamersTotEnMet, aantalKamersVan, aantalKavels, adres: JSONNull?
-    let friendlyURL, gewijzigdDatum, globalID: JSONNull?
+    let friendlyURL, gewijzigdDatum: JSONNull?
+    let globalID: Int?
     let hoofdFoto: HoofdFoto?
     let indIpix, indPDF, indPlattegrond, indTop: Bool?
     let indVideo: Bool?
@@ -423,7 +425,7 @@ extension Object {
         fotoMedium: String?? = nil,
         fotoSecure: String?? = nil,
         gewijzigdDatum: JSONNull?? = nil,
-        globalID: Int?? = nil,
+        projectGlobalID: Int?? = nil,
         groupByObjectType: String?? = nil,
         heeft360GradenFoto: Bool?? = nil,
         heeftBrochure: Bool?? = nil,
@@ -433,9 +435,9 @@ extension Object {
         heeftTophuis: Bool?? = nil,
         heeftVeiling: Bool?? = nil,
         heeftVideo: Bool?? = nil,
-        huurPrijsTot: JSONNull?? = nil,
-        huurprijs: JSONNull?? = nil,
-        huurprijsFormaat: JSONNull?? = nil,
+        huurPrijsTot: Int?? = nil,
+        huurprijs: Int?? = nil,
+        huurprijsFormaat: String?? = nil,
         id: String?? = nil,
         inUnitsVanaf: JSONNull?? = nil,
         indProjectObjectType: Bool?? = nil,
@@ -502,7 +504,7 @@ extension Object {
             fotoMedium: fotoMedium ?? self.fotoMedium,
             fotoSecure: fotoSecure ?? self.fotoSecure,
             gewijzigdDatum: gewijzigdDatum ?? self.gewijzigdDatum,
-            globalID: globalID ?? self.globalID,
+            projectGlobalID: projectGlobalID ?? self.projectGlobalID,
             groupByObjectType: groupByObjectType ?? self.groupByObjectType,
             heeft360GradenFoto: heeft360GradenFoto ?? self.heeft360GradenFoto,
             heeftBrochure: heeftBrochure ?? self.heeftBrochure,
@@ -592,14 +594,14 @@ extension Prijs {
     func with(
         geenExtraKosten: Bool?? = nil,
         huurAbbreviation: String?? = nil,
-        huurprijs: JSONNull?? = nil,
+        huurprijs: Int?? = nil,
         huurprijsOpAanvraag: String?? = nil,
-        huurprijsTot: JSONNull?? = nil,
+        huurprijsTot: Int?? = nil,
         koopAbbreviation: String?? = nil,
         koopprijs: Int?? = nil,
         koopprijsOpAanvraag: String?? = nil,
         koopprijsTot: Int?? = nil,
-        originelePrijs: JSONNull?? = nil,
+        originelePrijs: Int?? = nil,
         veilingText: String?? = nil
         ) -> Prijs {
         return Prijs(
@@ -649,7 +651,7 @@ extension Project {
         adres: JSONNull?? = nil,
         friendlyURL: JSONNull?? = nil,
         gewijzigdDatum: JSONNull?? = nil,
-        globalID: JSONNull?? = nil,
+        globalID: Int?? = nil,
         hoofdFoto: HoofdFoto?? = nil,
         indIpix: Bool?? = nil,
         indPDF: Bool?? = nil,
