@@ -22,6 +22,13 @@ class ListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        rankLabel.layer.cornerRadius = rankLabel.frame.size.height/2.0
+        rankLabel.layer.borderWidth = 2.0
+        rankLabel.layer.borderColor = UIColor.red.cgColor
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

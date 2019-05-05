@@ -20,9 +20,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2Y-s2-F6R">
-                        <rect key="frame" x="43" y="58.5" width="42" height="21"/>
+                        <rect key="frame" x="43" y="48" width="42" height="42"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="Twd-fB-YG4"/>
+                            <constraint firstAttribute="height" constant="42" id="Twd-fB-YG4"/>
                             <constraint firstAttribute="width" constant="42" id="cyV-1G-CRP"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
@@ -36,7 +36,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="20 huizen in Amsterdam" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbI-eX-y96">
-                        <rect key="frame" x="135" y="60.5" width="297" height="41.5"/>
+                        <rect key="frame" x="135" y="55.5" width="297" height="67"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -53,11 +53,11 @@
                     <constraint firstItem="GbI-eX-y96" firstAttribute="leading" secondItem="64R-rr-FY6" secondAttribute="leading" id="2rY-ft-K1E"/>
                     <constraint firstAttribute="trailing" secondItem="bki-cc-QUw" secondAttribute="trailing" id="4Dc-mc-8Mw"/>
                     <constraint firstItem="64R-rr-FY6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="AXB-mZ-yHK"/>
-                    <constraint firstItem="GbI-eX-y96" firstAttribute="top" secondItem="64R-rr-FY6" secondAttribute="bottom" constant="20" id="Dwb-aS-cvP"/>
+                    <constraint firstItem="GbI-eX-y96" firstAttribute="top" secondItem="64R-rr-FY6" secondAttribute="bottom" constant="15" id="Dwb-aS-cvP"/>
                     <constraint firstItem="Y2Y-s2-F6R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="43" id="GnU-s4-Yf9"/>
                     <constraint firstItem="64R-rr-FY6" firstAttribute="leading" secondItem="Y2Y-s2-F6R" secondAttribute="trailing" constant="50" id="HrJ-RK-1s7"/>
                     <constraint firstItem="bki-cc-QUw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="MlA-Nn-lnK"/>
-                    <constraint firstAttribute="bottom" secondItem="GbI-eX-y96" secondAttribute="bottom" constant="35.5" id="VqI-I4-jsO"/>
+                    <constraint firstAttribute="bottom" secondItem="GbI-eX-y96" secondAttribute="bottom" constant="15" id="VqI-I4-jsO"/>
                     <constraint firstItem="GbI-eX-y96" firstAttribute="trailing" secondItem="64R-rr-FY6" secondAttribute="trailing" id="XlE-7q-D4M"/>
                     <constraint firstItem="Y2Y-s2-F6R" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="l34-5F-l3X"/>
                     <constraint firstAttribute="bottom" secondItem="bki-cc-QUw" secondAttribute="bottom" id="waa-c9-bMy"/>

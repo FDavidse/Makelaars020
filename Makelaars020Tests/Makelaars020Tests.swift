@@ -169,9 +169,14 @@ class Makelaars020Tests: XCTestCase {
             return e1.makelaarId > e2.makelaarId
         }
         
+        let updatedList2:[Makelaar] = [].updateMakelaarListsWith(makelaars: list2).sorted { (e1, e2) -> Bool in
+            return e1.makelaarId > e2.makelaarId
+        }
+        
         //then
         XCTAssert(expectedResult == updatedList, "updated list \(updatedList) not equal to expected \(expectedResult)")
-        
+        XCTAssert(list2 == updatedList2, "updated list 2 \(updatedList2) not equal to expected \(list2)")
+
     }
     
     struct ApiServiceStub:HouseAPIServiceInterface {

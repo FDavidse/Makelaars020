@@ -98,14 +98,13 @@ class ResultsViewController: UIViewController {
     
     }
 
-
-
 }
 
 
 extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("number of makelaars: \(makelaars.count)")
         return makelaars.count
     }
     
@@ -117,7 +116,8 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
             if let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier) as? ListTableViewCell {
                 
                 cell.agentLabel.text = makelaar.name + "\n makelaar id: \(makelaar.makelaarId)"
-            
+                cell.numberOfHousesLabel.text = "\(makelaar.housesUnderSale.count) for sale"
+                cell.rankLabel.text = "\(indexPath.row + 1)"
                 return cell
                 
             } else {
