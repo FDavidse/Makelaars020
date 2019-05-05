@@ -141,6 +141,39 @@ class Makelaars020Tests: XCTestCase {
         
     }
     
+    ///Given an array containing Makelaar objecten. Merge another similar array into it.
+    /// Test if no duplicates are present after the operation. And the housesUnderSale properties are updated if necessary
+    func testUpdatingMakelaars() {
+        
+        //given
+        let m1 = Makelaar.init(name: "een", makelaarId: 1, housesUnderSale: ["1", "2", "3"])
+        let m2 = Makelaar.init(name: "twee", makelaarId: 2, housesUnderSale: ["4", "5", "6"])
+        let m3 = Makelaar.init(name: "drie", makelaarId: 3, housesUnderSale: ["7", "8", "9"])
+        let m4 = Makelaar.init(name: "drie", makelaarId: 3, housesUnderSale: ["1", "2", "10", "7", "4"])
+        let m5 = Makelaar.init(name: "twee", makelaarId: 2, housesUnderSale: ["11"])
+
+        let list1:[Makelaar] = [m3, m2, m1]
+        let list2:[Makelaar] = [m4, m5]
+        
+        let r1 = Makelaar.init(name: "een", makelaarId: 1, housesUnderSale: ["1", "2", "3"])
+        let r2 = Makelaar.init(name: "twee", makelaarId: 2, housesUnderSale: ["4", "5", "6", "11"])
+        let r3 = Makelaar.init(name: "drie", makelaarId: 3, housesUnderSale: ["1", "2", "7", "8", "9", "10", "4"])
+
+        
+        let expectedResult:[Makelaar] = [r2, r1, r3].sorted { (e1, e2) -> Bool in
+            return e1.makelaarId > e2.makelaarId
+        }
+        
+        //when
+        let updatedList:[Makelaar] = list1.updateMakelaarListsWith(makelaars: list2).sorted { (e1, e2) -> Bool in
+            return e1.makelaarId > e2.makelaarId
+        }
+        
+        //then
+        XCTAssert(expectedResult == updatedList, "updated list \(updatedList) not equal to expected \(expectedResult)")
+        
+    }
+    
     struct ApiServiceStub:HouseAPIServiceInterface {
         
         func retrieveHousesFor(type: String, keys: [String], page: Int, pageSize: Int, withSuccess: @escaping ((Data) -> Void), failure: @escaping ((APIError?) -> Void)) {

@@ -1070,13 +1070,17 @@ extension Houses {
         
         self.objects?.forEach({ (object) in
             
-            if let id = object.makelaarID, let name = object.makelaarNaam {
-                let makelaar: Makelaar = Makelaar.init(name:name, makelaarId:id)
+            if let id = object.makelaarID, let name = object.makelaarNaam, let objectId = object.id {
+                var makelaar: Makelaar = Makelaar.init(name:name, makelaarId:id, housesUnderSale: [objectId])
+                makelaar.housesUnderSale = []
                 
-                if allMakelaars.first(where: { (item) -> Bool in
+                if let match = allMakelaars.first(where: { (item) -> Bool in
                     return item.makelaarId == makelaar.makelaarId
-                }) == nil {
-                    allMakelaars.append(makelaar)
+                }) {
+                    allMakelaars.append(match)
+
+                } else {
+
                 }
                 
             }
