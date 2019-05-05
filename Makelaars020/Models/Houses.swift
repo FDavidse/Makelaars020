@@ -6,11 +6,6 @@
 //  Copyright © 2019 Filip Davidse. All rights reserved.
 //
 
-
-// To parse the JSON, add this file to your project and do:
-//
-//   let houses = try Houses(json)
-
 import Foundation
 
 struct Houses: Codable {
@@ -83,7 +78,7 @@ struct Object: Codable {
     let postcode: String?
     let prijs: Prijs?
     let prijsGeformatteerdHTML, prijsGeformatteerdTextHuur, prijsGeformatteerdTextKoop: String?
-    let producten: [Producten]?
+    let producten: [String]?
     let project: Project?
     let projectNaam: JSONNull?
     let promoLabel: PromoLabel?
@@ -213,15 +208,6 @@ struct Prijs: Codable {
         case originelePrijs = "OriginelePrijs"
         case veilingText = "VeilingText"
     }
-}
-
-enum Producten: String, Codable {
-    case brochure = "Brochure"
-    case featured = "Featured"
-    case plattegrond = "Plattegrond"
-    case the360Fotos = "360-fotos"
-    case toppositie = "Toppositie"
-    case video = "Video"
 }
 
 struct Project: Codable {
@@ -473,7 +459,7 @@ extension Object {
         prijsGeformatteerdHTML: String?? = nil,
         prijsGeformatteerdTextHuur: String?? = nil,
         prijsGeformatteerdTextKoop: String?? = nil,
-        producten: [Producten]?? = nil,
+        producten: [String]?? = nil,
         project: Project?? = nil,
         projectNaam: JSONNull?? = nil,
         promoLabel: PromoLabel?? = nil,
@@ -1071,17 +1057,9 @@ extension Houses {
         self.objects?.forEach({ (object) in
             
             if let id = object.makelaarID, let name = object.makelaarNaam, let objectId = object.id {
-                var makelaar: Makelaar = Makelaar.init(name:name, makelaarId:id, housesUnderSale: [objectId])
-                makelaar.housesUnderSale = []
                 
-                if let match = allMakelaars.first(where: { (item) -> Bool in
-                    return item.makelaarId == makelaar.makelaarId
-                }) {
-                    allMakelaars.append(match)
-
-                } else {
-
-                }
+                var makelaar: Makelaar = Makelaar.init(name:name, makelaarId:id, housesUnderSale: [objectId])
+                allMakelaars = allMakelaars.updateMakelaarListsWith(makelaars: [makelaar])
                 
             }
         })
@@ -1089,7 +1067,5 @@ extension Houses {
         return allMakelaars
         
     }
-    
-    
-    
+ 
 }
